@@ -4,7 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PackPlan — Cartonization & 3D Bin Packing</title>
-  <meta name="description" content="Pack SKUs into shipping cartons in seconds. Free demo + full desktop toolkit for e-commerce and warehouse ops." />
+  <meta name="description" content="Pack SKUs into shipping cartons in seconds. Free demo + full offline toolkit ($19) for e-commerce and warehouse ops." />
+  <meta property="og:title" content="PackPlan — Cartonization Toolkit" />
+  <meta property="og:description" content="CSV of SKUs → carton count, fill %, 3D packing plan. Free demo. Full version $19 with Python CLI." />
+  <meta property="og:url" content="https://rayjyotir5.github.io/packplan/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PackPlan — Cartonization Toolkit" />
+  <meta name="twitter:description" content="Offline cartonization in the browser. Free demo · Full $19." />
+  <link rel="canonical" href="https://rayjyotir5.github.io/packplan/" />
   <style>
     :root {
       --bg: #0a0e13;
@@ -104,8 +112,19 @@
     </div>
     <div class="row2" style="width:min(420px,100%);gap:0.5rem">
       <button class="ghost" id="btnSample" type="button" style="margin:0">Load sample order</button>
-      <button class="secondary" id="btnBuy" type="button" style="margin:0">Get full version →</button>
+      <button id="btnBuy" type="button" style="margin:0">Get full · $19 →</button>
     </div>
+  </div>
+
+  <div class="panel" style="max-width:1400px;margin:0.75rem auto 0;padding:0.75rem 1rem;display:flex;flex-wrap:wrap;gap:0.75rem 1.25rem;align-items:center;justify-content:space-between">
+    <div style="color:var(--muted);font-size:0.92rem;max-width:48rem">
+      <strong style="color:var(--text)">Ship less air.</strong>
+      Paste SKU dimensions → get carton count, fill %, and a 3D plan. Demo is free (12 items). Full offline toolkit is <strong style="color:var(--green)">$19 one-time</strong> — unlimited + Python CLI. No login. Data stays on your machine.
+    </div>
+    <a class="btn" id="topBuy" href="https://rayjyotir.gumroad.com/l/qfkzfq" target="_blank" rel="noopener"
+       style="display:inline-block;background:linear-gradient(135deg,var(--green),#2bb673);color:#04150e;text-decoration:none;font-weight:700;padding:0.65rem 1rem;border-radius:10px;white-space:nowrap">
+      Buy full version · $19
+    </a>
   </div>
 
   <div class="layout">
@@ -152,8 +171,8 @@ SKU-E,10,6,3,0.2,6</textarea>
       <button class="secondary" id="btnExport" type="button">Export plan (JSON/CSV)</button>
       <p class="hint">Free demo: max <strong>12 item units</strong> and <strong>4 carton types</strong>. Full version unlocks unlimited + offline CLI.</p>
       <div class="paywall" id="paywall" hidden>
-        Demo limit hit. Full PackPlan unlocks unlimited packing, multi-order CSV, and the Python CLI.
-        <div style="margin-top:0.45rem"><a id="buyLink" href="#buy" target="_blank" rel="noopener">Buy full version</a></div>
+        Demo limit hit. Full PackPlan unlocks unlimited packing and the Python CLI — <strong>$19 one-time</strong>.
+        <div style="margin-top:0.45rem"><a id="buyLink" href="https://rayjyotir.gumroad.com/l/qfkzfq" target="_blank" rel="noopener">Buy full version on Gumroad →</a></div>
       </div>
     </aside>
 
@@ -175,6 +194,9 @@ SKU-E,10,6,3,0.2,6</textarea>
   <div class="footer">
     PackPlan demo · Runs 100% in your browser · No data leaves this page ·
     <span id="licenseLine">Unlicensed demo build</span>
+    · <a href="https://rayjyotir.gumroad.com/l/qfkzfq" style="color:var(--green)">Full $19</a>
+    · <a href="mailto:rayjyotir5@gmail.com" style="color:var(--muted)">rayjyotir5@gmail.com</a>
+    · <a href="https://github.com/rayjyotir5/packplan" style="color:var(--muted)">GitHub</a>
   </div>
 
   <script>
